@@ -1,13 +1,25 @@
-import express from 'express';
-import type { Request, Response } from 'express';
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import authRoutes from "./routes/authRoutes.js";
+import todoRoutes from "./routes/todoRoutes.js";
 
-const PORT = 3000;
+dotenv.config();
+
 const app = express();
+const PORT = process.env["PORT"] ?? 5000;
 
-app.get("/", ( req : Request , res: Response ) => {
-    res.send("Hello from Merrill!")
-})
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(express.json());
+
+app.use("/api/auth", authRoutes);
+app.use("/api/todos", todoRoutes);
+
+app.get("/health", (_req, res) => {
+  res.json({ status: "ok" });
+});
+
 
 app.listen(PORT, () => {
-    console.log(`Server running on port: ${PORT}.`);
-})
+    console.log(`Server running on http://localhost:${PORT}`);
+});
