@@ -17,7 +17,7 @@ A full-stack Todo application built with a clean monorepo structure. Features JW
 
 ---
 
-## 🗄️ Database Schema
+##  Database Schema
 
 ### `users`
 
@@ -41,7 +41,7 @@ A full-stack Todo application built with a clean monorepo structure. Features JW
 
 ---
 
-## 🔌 API Endpoints
+##  API Endpoints
 
 ### Auth — `/api/auth`
 
