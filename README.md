@@ -4,6 +4,11 @@ A full-stack Todo application built with a clean monorepo structure. Features JW
 
 ---
 
+##  System Architecture Diagram
+  Link: https://excalidraw.com/#json=scuM6eBALrV_Ig2hJYb5_,EOB-Fc1K4RcgoH3qgq48Pw
+
+---
+
 ##  Tech Stack
 
 | Layer | Technology |
